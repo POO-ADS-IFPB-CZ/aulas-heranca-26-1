@@ -1,13 +1,17 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+import modelo.Aluno;
+import modelo.Pessoa;
+import modelo.Professor;
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
-    }
+void main() {
+
+   Pessoa pessoa = new Aluno("Maria", "222.222.222-02",
+           LocalDate.of(2000, 4,7),
+           123, "Rua B, 333, Cajazeiras",
+           "ADS");
+    Pessoa pessoa1 = new Professor("José",
+            "333.333.333-03",
+            LocalDate.of(2000,8,3),
+            321, "Rua C, 123, Cajazeiras",
+            2000);
+
 }
