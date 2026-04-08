@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public abstract class Funcionario extends Pessoa{
 
     private int matricula;
-    private float salario;
+    protected float salario;
 
     public Funcionario(String nome, String cpf, LocalDate nascimento,
                        String endereco, int matricula,

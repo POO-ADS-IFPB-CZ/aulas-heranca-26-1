@@ -23,12 +23,12 @@ public class Professor extends Funcionario {
 
     @Override
     public float calcularPagamento() {
-        float salario = getSalario();
+        float salarioFinal = salario;
         switch (titulacao){
-            case "Especialização" -> salario+=500;
-            case "Mestrado" -> salario+=1000;
-            case "Doutorado" -> salario+=2000;
+            case "Especialização" -> salarioFinal+=500;
+            case "Mestrado" -> salarioFinal+=1000;
+            case "Doutorado" -> salarioFinal+=2000;
         }
-        return salario;
+        return salarioFinal;
     }
 }

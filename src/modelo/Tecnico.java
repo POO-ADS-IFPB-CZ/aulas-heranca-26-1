@@ -23,6 +23,6 @@ public class Tecnico extends Funcionario{
 
     @Override
     public float calcularPagamento() {
-        return setor.contains("Laboratório")?getSalario()*1.4f:getSalario();
+        return setor.contains("Laboratório")?salario*1.4f:salario;
     }
 }

@@ -9,7 +9,7 @@ void main() {
             LocalDate.of(2000,2,3),
             "Rua Z, 300, Cajazeiras",
             123, 2000, "Doutorado");
-    Tecnico funcionario1 = new Tecnico("Maria",
+    Funcionario funcionario1 = new Tecnico("Maria",
             "222.222.222-02",
             LocalDate.of(2000,3,3),
             "Rua Y, 100, Cajazeiras",
