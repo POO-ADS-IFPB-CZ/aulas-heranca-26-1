@@ -4,17 +4,32 @@ import modelo.Tecnico;
 
 void main() {
 
-    Funcionario funcionario = new Professor("João",
-            "111.111.111-01",
-            LocalDate.of(2000,2,3),
-            "Rua Z, 300, Cajazeiras",
-            123, 2000, "Doutorado");
-    Funcionario funcionario1 = new Tecnico("Maria",
-            "222.222.222-02",
-            LocalDate.of(2000,3,3),
-            "Rua Y, 100, Cajazeiras",
-            312, 2000, "Laboratório de química");
-    System.out.println(funcionario.calcularPagamento());
-    System.out.println(funcionario1.calcularPagamento());
+    Funcionario funcionarios[] = {
+            new Tecnico("João", "111.111.111-01",
+                    LocalDate.of(2000,3,5),
+                    "Rua a, 30", 123, 2000,
+                    "Laboratório"),
+            new Tecnico("Maria", "222.222.222-02",
+                    LocalDate.of(2000,3,5),
+                    "Rua a, 30", 123, 2000,
+                    "Laboratório"),
+            new Professor("Pedro", "333.333.333-03",
+                    LocalDate.of(2000,3,2),
+                    "Rua X, 40", 123, 2000,
+                    "Doutorado"),
+            null
+    };
+
+    int totalProfessores = 0;
+    int totalTecnicos = 0;
+
+    for(Funcionario f : funcionarios){
+        if(f instanceof Tecnico) totalTecnicos++;
+        if(f instanceof Professor) totalProfessores++;
+    }
+
+    System.out.println(totalProfessores);
+    System.out.println(totalTecnicos);
+
 
 }
