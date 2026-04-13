@@ -1,16 +1,15 @@
-import modelo.*;
+import modelo2.*;
 
 void main() {
 
-    Conta conta = new ContaCorrente("João", 1, 2000,
-            30);
-    Conta conta1 = new ContaPoupanca("Maria", 2, 2000,
-            10);
+    Funcionario funcionario = new Assalariado("111.111.111-01",
+            "João", LocalDate.now(),1, 2000);
+    Funcionario funcionario1 = new Horista("222.222.222-02",
+            "Maria", LocalDate.now(), 2,
+            10, 48);
 
-    conta.fecharMes();
-    conta1.fecharMes();
+    System.out.println(funcionario.calcularPagamento());
+    System.out.println(funcionario1.calcularPagamento());
 
-    System.out.println(conta.getSaldo());
-    System.out.println(conta1.getSaldo());
 
 }
